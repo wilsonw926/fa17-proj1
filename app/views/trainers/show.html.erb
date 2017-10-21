@@ -4,7 +4,9 @@
 <h3>Pokemons</h3>
 <% @pokemons.each do |pokemon| %>
 <br>
-	<%= pokemon.name %>
-	<%= pokemon.level %> 
+	Name: <%= pokemon.name %>
+	| Level: <%= pokemon.level %> 
+	| Health: <%= pokemon.health %>
+	<%= button_to "Damage!", damage_path(id: pokemon.id), :class => "button medium", :method => :patch %>
 </br>
 <%end%>
