@@ -18,6 +18,7 @@
 			<%= button_to "Damage!", damage_path(id: pokemon.id), :class => "button medium", :method => :patch %>
 		<%end%>
 		<%= button_to "Heal!", heal_path(id: pokemon.id), :class => "button medium", :method => :patch %>
+		<%= button_to "Release!", release_path(id: pokemon.id), :class => "button medium", :method => :patch %>
 	<%end%>
 </br>
 <%end%>

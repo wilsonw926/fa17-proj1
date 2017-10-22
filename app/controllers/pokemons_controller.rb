@@ -24,6 +24,12 @@ class PokemonsController < ApplicationController
 		redirect_to trainer_path(id: pokemon.trainer_id)
 	end
 
+	def release
+		pokemon = Pokemon.find(params[:id])
+		pokemon.delete
+		redirect_to trainer_path(id: pokemon.trainer_id)
+	end
+
 	def create
 		pokemon = Pokemon.new
 		pokemon.update(params.require(:pokemon).permit(:name))
