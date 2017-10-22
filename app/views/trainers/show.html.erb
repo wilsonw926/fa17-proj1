@@ -10,3 +10,5 @@
 	<%= button_to "Damage!", damage_path(id: pokemon.id), :class => "button medium", :method => :patch %>
 </br>
 <%end%>
+
+<%= button_to "Create a New Pokemon", new_pokemon_path, :class => "button medium", :method => :get %>
